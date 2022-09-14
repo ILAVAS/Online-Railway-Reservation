@@ -31,7 +31,7 @@ public class FareServiceTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);
@@ -40,7 +40,7 @@ public class FareServiceTest {
 		Optional<Fare> optionalFare = Optional.of(fare);
 		when(fareRepository.findById(10)).thenReturn(optionalFare);
 		Fare myFare = fareService.getFareById(10);
-		assertEquals(2500, myFare.getACChairClass());
+		assertEquals(2500, myFare.getaCChairClass());
 	}
 	
 	@Test
@@ -55,7 +55,7 @@ public class FareServiceTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);
@@ -63,7 +63,7 @@ public class FareServiceTest {
 		
 		when(fareRepository.save(fare)).thenReturn(fare);
 		Fare newFare = fareService.saveFare(fare);
-		assertEquals(2500, newFare.getACChairClass());
+		assertEquals(2500, newFare.getaCChairClass());
 		verify(fareRepository,times(1)).save(fare);
 	}
 	
@@ -72,7 +72,7 @@ public class FareServiceTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);
@@ -91,7 +91,7 @@ public class FareServiceTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);
@@ -106,7 +106,7 @@ public class FareServiceTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);

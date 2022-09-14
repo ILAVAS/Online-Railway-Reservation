@@ -1,4 +1,4 @@
-package com.ticket.pojo;
+package com.user.models;
 
 
 import org.springframework.data.annotation.Id;
@@ -13,7 +13,7 @@ public class Booking {
     public static final String SEQUENCE_NAME = "booking_sequence";
 	@Id
 	private int bookingId;
-	private String name;
+	private String passengerName;
 	private int age;
 	private String gender;
 	private String dateOfJourney;
@@ -53,13 +53,12 @@ public class Booking {
 		this.seatType = seatType;
 	}
 
-
-	public String getName() {
-		return name;
+	public String getPassengerName() {
+		return passengerName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setPassengerName(String passengerName) {
+		this.passengerName = passengerName;
 	}
 
 	public int getAge() {

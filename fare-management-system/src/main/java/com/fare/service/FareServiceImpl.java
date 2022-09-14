@@ -1,5 +1,6 @@
 package com.fare.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,14 @@ public class FareServiceImpl implements FareService {
 		Fare newFare = fareRepository.save(fare);
 		return newFare;
 	}
+	
+	@Override
+	public List<Fare> getAllFare() {
+
+		List<Fare> allFare = fareRepository.findAll();
+		return allFare;
+	}
+
 
 	@Override
 	public Fare getFareById(int fareId) {

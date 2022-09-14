@@ -1,16 +1,7 @@
-package com.fare.pojo;
+package com.user.models;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "fare_collection")
 public class Fare {
 
-
-	@Transient
-    public static final String SEQUENCE_NAME = "fare_sequence";
-	@Id
 	private int fareId;
 	private double tatkal;
 	private double secondClass;
@@ -58,13 +49,12 @@ public class Fare {
 		this.firstClass = firstClass;
 	}
 
-	public double getaCChairClass() {
+	public double getACChairClass() {
 		return aCChairClass;
 	}
 
-	public void setaCChairClass(double aCChairClass) {
+	public void setACChairClass(double aCChairClass) {
 		this.aCChairClass = aCChairClass;
 	}
 
-	
 }

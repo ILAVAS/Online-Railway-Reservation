@@ -50,7 +50,7 @@ public class BookingControllerTest {
 		
 		booking = new Booking();
 		booking.setBookingId(10);
-		booking.setPassengerName("ilavarasi");
+		booking.setName("ilavarasi");
 		booking.setAge(24);
 		booking.setGender("female");
 //		booking.setDateOfJourney(LocalDate.of(2022, 12, 31));

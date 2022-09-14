@@ -24,14 +24,14 @@ public class FareRepositoryTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);
 		fare.setTatkal(200);
 		
 		when(fareRepository.save(fare)).thenReturn(fare);
-		assertEquals(2500, fare.getACChairClass());
+		assertEquals(2500, fare.getaCChairClass());
 	}
 	
 	@Test
@@ -39,7 +39,7 @@ public class FareRepositoryTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);
@@ -47,7 +47,7 @@ public class FareRepositoryTest {
 		
 		Fare fare1 = new Fare();
 		fare1.setFareId(11);
-		fare1.setACChairClass(3500);
+		fare1.setaCChairClass(3500);
 		fare1.setFirstClass(2000);
 		fare1.setSecondClass(650);
 		fare1.setSleeperClass(900);
@@ -55,7 +55,7 @@ public class FareRepositoryTest {
 		
 		Fare fare2 = new Fare();
 		fare2.setFareId(12);
-		fare2.setACChairClass(1500);
+		fare2.setaCChairClass(1500);
 		fare2.setFirstClass(900);
 		fare2.setSecondClass(450);
 		fare2.setSleeperClass(600);
@@ -75,7 +75,7 @@ public class FareRepositoryTest {
 		
 		Fare fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(550);
 		fare.setSleeperClass(800);
@@ -83,6 +83,6 @@ public class FareRepositoryTest {
 		
 		Optional<Fare> optionalFare = Optional.of(fare);
 		when(fareRepository.findById(10)).thenReturn(optionalFare);
-		assertEquals(2500, fare.getACChairClass());
+		assertEquals(2500, fare.getaCChairClass());
 	}
 }

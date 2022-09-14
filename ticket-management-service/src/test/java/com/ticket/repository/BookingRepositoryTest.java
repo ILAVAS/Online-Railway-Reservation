@@ -25,15 +25,15 @@ public class BookingRepositoryTest {
 		
 		Booking booking = new Booking();
 		booking.setBookingId(10);
-		booking.setPassengerName("ilavarasi");
+		booking.setName("ilavarasi");
 		booking.setAge(24);
 		booking.setGender("female");
-		booking.setDateOfJourney(LocalDate.of(2022, 12, 31));
+		booking.setDateOfJourney(" ");
 		booking.setSeatType("aCChairClass");
 		booking.setTrainId(11);
 		
 		when(bookingRepository.save(booking)).thenReturn(booking);
-		assertEquals("ilavarasi", booking.getPassengerName());
+		assertEquals("ilavarasi", booking.getName());
 		
 	}
 	
@@ -42,28 +42,28 @@ public class BookingRepositoryTest {
 		
 		Booking booking = new Booking();
 		booking.setBookingId(10);
-		booking.setPassengerName("ilavarasi");
+		booking.setName("ilavarasi");
 		booking.setAge(24);
 		booking.setGender("female");
-		booking.setDateOfJourney(LocalDate.of(2022, 12, 31));
+		booking.setDateOfJourney( "");
 		booking.setSeatType("aCChairClass");
 		booking.setTrainId(11);
 		
 		Booking booking1 = new Booking();
 		booking1.setBookingId(10);
-		booking1.setPassengerName("ilavarasi");
+		booking1.setName("ilavarasi");
 		booking1.setAge(24);
 		booking1.setGender("female");
-		booking1.setDateOfJourney(LocalDate.of(2022, 12, 31));
+		booking1.setDateOfJourney("");
 		booking1.setSeatType("aCChairClass");
 		booking1.setTrainId(11);
 		
 		Booking booking2 = new Booking();
 		booking2.setBookingId(10);
-		booking2.setPassengerName("ilavarasi");
+		booking2.setName("ilavarasi");
 		booking2.setAge(24);
 		booking2.setGender("female");
-		booking2.setDateOfJourney(LocalDate.of(2022, 12, 31));
+		booking2.setDateOfJourney("");
 		booking2.setSeatType("aCChairClass");
 		booking2.setTrainId(11);
 		
@@ -81,16 +81,16 @@ public class BookingRepositoryTest {
 		
 		Booking booking = new Booking();
 		booking.setBookingId(10);
-		booking.setPassengerName("ilavarasi");
+		booking.setName("ilavarasi");
 		booking.setAge(24);
 		booking.setGender("female");
-		booking.setDateOfJourney(LocalDate.of(2022, 12, 31));
+		booking.setDateOfJourney("");
 		booking.setSeatType("aCChairClass");
 		booking.setTrainId(11);
 		
 		Optional<Booking> optionalBooking = Optional.of(booking);
 		when(bookingRepository.findById(10)).thenReturn(optionalBooking);
-		assertEquals("ilavarasi", booking.getPassengerName());
+		assertEquals("ilavarasi", booking.getName());
 	}
 	
 }

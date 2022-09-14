@@ -44,7 +44,7 @@ public class FareControllerTest {
 		
 		fare = new Fare();
 		fare.setFareId(10);
-		fare.setACChairClass(2500);
+		fare.setaCChairClass(2500);
 		fare.setFirstClass(1000);
 		fare.setSecondClass(800);
 		fare.setSleeperClass(550);
